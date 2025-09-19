@@ -1,11 +1,20 @@
 // Carregar horários disponíveis com base na data
 document.getElementById("data").addEventListener("change", async function () {
   const data = this.value;
-  const res = await fetch(`/api/horarios?data=${data}`);
-  const horarios = await res.json();
-
   const select = document.getElementById("hora");
-  select.innerHTML = horarios.map(h => `<option value="${h}">${h}</option>`).join('');
+  select.innerHTML = '<option>Carregando...</option>';
+
+  try {
+    const res = await fetch(`/api/horarios?data=${data}`);
+    const horarios = await res.json();
+
+    if (!Array.isArray(horarios)) throw new Error("Formato inválido");
+
+    select.innerHTML = horarios.map(h => `<option value="${h}">${h}</option>`).join('');
+  } catch (err) {
+    console.error("Erro ao carregar horários:", err);
+    select.innerHTML = '<option>Erro ao carregar</option>';
+  }
 });
 
 
@@ -29,3 +38,4 @@ document.getElementById("formAgendamento").addEventListener("submit", function(e
 document.getElementById("menu-toggle").addEventListener("click", function(){
   document.getElementById("nav-links").classList.toggle("active");
 });
+
