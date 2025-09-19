@@ -3,9 +3,11 @@ document.getElementById("data").addEventListener("change", async function () {
   const data = this.value;
   const res = await fetch(`/api/horarios?data=${data}`);
   const horarios = await res.json();
+
   const select = document.getElementById("hora");
   select.innerHTML = horarios.map(h => `<option value="${h}">${h}</option>`).join('');
 });
+
 
 // Agendamento via WhatsApp
 document.getElementById("formAgendamento").addEventListener("submit", function(e){
