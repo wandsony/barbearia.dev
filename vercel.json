@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "builds": [
+    { "src": "api/*.js", "use": "@vercel/node" },
+    { "src": "public/index.html", "use": "@vercel/static" }
+  ],
+  "routes": [
+    { "src": "/api/agendar", "dest": "/api/agendar.js" },
+    { "src": "/api/horarios", "dest": "/api/horarios.js" },
+    { "src": "/api/painel", "dest": "/api/painel.js" },
+    { "src": "/api/cancelar", "dest": "/api/cancelar.js" },
+    { "src": "/api/login", "dest": "/api/login.js" },
+    { "src": "/(.*)", "dest": "/public/$1" }
+  ]
+}

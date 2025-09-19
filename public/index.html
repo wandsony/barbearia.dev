@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Barbearia</title>
+  <link rel="stylesheet" href="style.css"/>
+  <script src="https://kit.fontawesome.com/6dcf528634.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<!-- Header -->
+<header>
+  <nav class="navbar container">
+    <div class="logo">
+      <img src="assets/logo.svg" alt="Logo Barbearia"/>
+    </div>
+
+    <button class="menu-toggle" id="menu-toggle">☰</button>
+
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#servicos">Serviços</a></li>
+      <li><a href="#agendamento">Agendamento</a></li>
+      <li><a href="#contato">Contato</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- Hero -->
+<main class="hero">
+  <h1>Sua barbearia de confiança</h1>
+  <p>Estilo, tradição e qualidade em cada corte.</p>
+  <a href="#agendamento" class="button-contact">Agende seu horário</a>
+</main>
+
+<!-- Sobre -->
+<section id="sobre" class="about container">
+  <div class="about-content">
+    <img src="assets/images.svg" alt="Sobre a Barbearia"/>
+    <div class="about-description">
+      <h2>Sobre nós</h2>
+      <p>Mais que cortes de cabelo e barba, oferecemos experiência, conforto e estilo.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Serviços -->
+<section id="servicos" class="services container">
+  <div class="services-content">
+    <h2>Serviços</h2>
+    <p>Do corte clássico ao estilo moderno, temos o serviço ideal para você.</p>
+  </div>
+  <div class="cards">
+    <div class="card">
+      <img src="assets/corte1.png" alt="Corte de cabelo"/>
+      <div class="card-info">
+        <strong>Corte de Cabelo</strong>
+        <button>R$60</button>
+      </div>
+    </div>
+    <div class="card">
+      <img src="assets/corte2.png" alt="Barba"/>
+      <div class="card-info">
+        <strong>Barba</strong>
+        <button>R$40</button>
+      </div>
+    </div>
+    <div class="card">
+      <img src="assets/corte3.png" alt="Cabelo e barba"/>
+      <div class="card-info">
+        <strong>Cabelo + Barba</strong>
+        <button>R$90</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Agendamento -->
+<section id="agendamento" class="agendamento container">
+  <h2>Agende seu horário</h2>
+  <form id="formAgendamento">
+    <input type="text" id="nome" placeholder="Seu nome" required />
+    <input type="tel" id="telefone" placeholder="Seu telefone (com DDD)" required />
+    <input type="date" id="data" required />
+    <select id="hora" required></select>
+    <button type="submit" class="button-contact">Confirmar via WhatsApp</button>
+  </form>
+</section>
+
+<!-- Localização -->
+<section class="location">
+  <div class="services">
+    <h2>Venha conhecer</h2>
+    <p>Estamos esperando você no nosso espaço, confira a localização abaixo:</p>
+  </div>
+  <div class="map-container">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3660.618539500225!2d-46.58183872387241!3d-23.43814305707852!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cef43c057a44ad%3A0xdb970d5dda6bb4a3!2sRua%20Francisco%20Bagatti%2C%20381%20-%20Associacao%20Sobradinho%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2002361-160!5e0!3m2!1spt-BR!2sbr!4v1693782721146!5m2!1spt-BR!2sbr" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+  </div>
+  <a class="button-contact rota-btn" target="_blank" href="https://www.google.com/maps/dir/?api=1&destination=Rua+Francisco+Bagatti,+381,+São+Paulo">
+    Traçar rota no Google Maps
+  </a>
+</section>
+
+<!-- Rodapé -->
+<footer class="footer" id="contato">
+  <div class="footer-icons">
+    <a href="#"><i class="fa-brands fa-instagram fa-2x"></i></a>
+    <a href="#"><i class="fa-brands fa-facebook fa-2x"></i></a>
+    <a href="#"><i class="fa-brands fa-linkedin fa-2x"></i></a>
+  </div>
+  <div>
+    <img src="assets/logo.svg" alt="Logo barbearia"/>
+  </div>
+  <p>&copy; 2025 Barbearia - Todos os direitos reservados.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
